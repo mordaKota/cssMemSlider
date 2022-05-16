@@ -22,7 +22,7 @@ ul li {
 
 .container {
   display: grid;
-  grid-template-areas:
+  grid-template-areas: 
     "img img"
     "txt ctrl";
   max-width: 50%;
@@ -150,4 +150,17 @@ label:before {
   opacity: 1;
   transition: transform 0.5s, opacity 0.5s;
   transform: none;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas:
+      "img img"
+      "ctrl ctrl"
+      "txt txt";
+  }
+
+  .controls {
+    justify-self: center;
+  }
 }
